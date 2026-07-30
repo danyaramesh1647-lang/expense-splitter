@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const groupSchema = new mongoose.Schema({
   name: {
@@ -18,6 +19,3 @@ const groupSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 module.exports = mongoose.model('Group', groupSchema);
-loadGroup();
-loadExpenses();
-loadBalances();
