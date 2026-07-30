@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Expense Splitter</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h2>Expense Splitter</h2>
+    <div>
+      <span id="welcomeMsg" style="margin-right:14px; color:#475569; font-size:14px;"></span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h3>Create a Group</h3>
+      <form id="createGroupForm">
+        <label for="groupName">Group name</label>
+        <input type="text" id="groupName" placeholder="e.g. Goa Trip" required>
+
+        <label for="memberEmails">Member emails (comma-separated, besides yourself)</label>
+        <input type="text" id="memberEmails" placeholder="friend1@email.com, friend2@email.com">
+
+        <button type="submit" class="btn">Create Group</button>
+      </form>
+      <p id="groupMessage" class="message"></p>
+    </div>
+
+    <div class="card">
+      <h3>Your Groups</h3>
+      <div id="groupsList">
+        <p class="empty-state">Loading groups...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

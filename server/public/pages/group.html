@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group - Expense Splitter</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">Expense Splitter</h1>
+    <div>
+      <span id="userGreeting"></span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="groupName">Loading group...</h2>
+      <div id="membersList"></div>
+    </section>
+
+    <section class="card">
+      <h3>Add an Expense</h3>
+      <form id="addExpenseForm">
+        <input type="text" id="description" placeholder="What was it for? e.g. Dinner" required>
+        <input type="number" id="amount" step="0.01" placeholder="Amount" required>
+        <select id="paidBy"></select>
+        <select id="splitType">
+          <option value="equal">Split Equally</option>
+          <option value="unequal">Unequal Split</option>
+          <option value="percentage">Percentage Split</option>
+        </select>
+        <div id="customSplitsWrapper" class="hidden">
+          <div id="customSplitsList"></div>
+        </div>
+        <button type="submit">Add Expense</button>
+        <p id="expenseMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h3>Expenses</h3>
+      <div id="expensesList"></div>
+    </section>
+
+    <section class="card">
+      <h3>Balances</h3>
+      <div id="balancesList"></div>
+      <h4>Suggested Settlements</h4>
+      <div id="transactionsList"></div>
+    </section>
+  </main>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/group.js"></script>
+</body>
+</html>
